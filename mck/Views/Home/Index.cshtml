@@ -1,2 +1,13 @@
 ﻿
-
+@if (Request.IsAuthenticated)
+{
+    <div>
+        @Html.Partial("~/Views/Partials/IndexLoggedIn.cshtml")
+    </div>
+}
+else
+{
+    <div>
+        @Html.Partial("~/Views/Partials/IndexNotLoggedIn.cshtml")
+    </div>
+}
